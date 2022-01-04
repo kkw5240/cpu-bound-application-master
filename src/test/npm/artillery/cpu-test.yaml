@@ -1,7 +1,7 @@
 config:
-  target: "http://3.21.98.125"
+  target: "http://13.209.76.141"
   phases:
-    - duration: 60
+    - duration: 30
       arrivalRate: 1
       name: Warm up
 
@@ -10,3 +10,6 @@ scenarios:
     flow:
       - get:
           url: "/hash/123"
+
+# run artillery : > artillery.cmd run --output report.json .\cpu-test.yaml
+# make report html : > artillery.cmd report .\report.json
